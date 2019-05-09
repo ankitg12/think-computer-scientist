@@ -36,15 +36,10 @@ def contains(list,item):
     while node:
         if node.cargo == item:
             return True
+        # update the variable to point to the next item
+        # otherwise it'd be infinite loop
         node = node.next
     return False
-
-# learning:
-# need to make sure that I am updating the variable to point to the next item
-# can't do a check if we are not updating it.
-
-
-
 
 if __name__=="__main__":
     from random import randint
